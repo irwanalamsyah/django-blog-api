@@ -1,1 +1,1 @@
-# Django4
+# a Blog API using the full set of Django REST Framework features.
