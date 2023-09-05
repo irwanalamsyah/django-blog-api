@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    # 3rd-party apps
+    "rest_framework",
+    "corsheaders",
+    
     # Local
     # "accounts",
     # "posts",
@@ -127,4 +132,18 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Auth CustomUser
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+# Rest Framework permissions
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ]
+}
+
+# CORS Whitelist
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:3000",
+    "http://localhost:8000",
+)
